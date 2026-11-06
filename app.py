@@ -18,14 +18,14 @@ def chat():
         return jsonify({"error": "هیچ نامەیەک نەدراوە"}), 400
 
     try:
-        # پێدانی کەسایەتی ARAyAI لە سیستەمی نوێدا
         sys_instruct = "تۆ ناوت ARAyAI یە، ژیرییەکی دەستکردی کوردییت، بە شێوەیەکی زیرەکانە و بە زمانی کوردی سۆرانی وەڵام دەدەیتەوە."
         config = types.GenerateContentConfig(
             system_instruction=sys_instruct,
         )
         
+        # لێرەدا ناوی مۆدێلەکە گۆڕدرا بۆ gemini-2.0-flash
         response = client.models.generate_content(
-            model='gemini-1.5-flash',
+            model='gemini-2.0-flash',
             contents=user_message,
             config=config
         )
