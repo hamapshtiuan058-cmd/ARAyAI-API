@@ -23,9 +23,9 @@ def chat():
             system_instruction=sys_instruct,
         )
         
-        # لێرەدا ناوی مۆدێلەکە گۆڕدرا بۆ gemini-2.0-flash
+        # لێرەدا مۆدێلەکە گۆڕدرا بۆ نوێترین ڤێرژنی 3.8 کە گۆگڵ داوای کردووە
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-3.8-flash',
             contents=user_message,
             config=config
         )
